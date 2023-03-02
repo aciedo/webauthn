@@ -33,7 +33,7 @@ der-parser = "7.0.0"
 compact_jwt = "0.2.3"
 uuid = { version = "1", features = ["serde"] }
 rkyv = { version = "0.7.39", features = ["validation", "uuid", "copy", "strict"] }
-bytecheck = { version = "0.6.9", features = ["uuid", "simdutf8_std", "simdutf8"] }
+bytecheck = { version = "0.7.0", features = ["uuid"] }
 serde_cbor_2 = "0.12.0-dev"
 
 [dev-dependencies]
