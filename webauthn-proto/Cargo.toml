@@ -1,0 +1,46 @@
+[package]
+name = "webauthn-proto"
+version = "0.5.0-dev"
+authors = ["Azz <azz@valera.co>"]
+edition = "2021"
+description = "Webauthn Specification Bindings"
+repository = "https://github.com/valeralabs/webauthn"
+readme = "README.md"
+keywords = ["webauthn", "authentication"]
+categories = ["authentication", "web-programming"]
+license = "MPL-2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+wasm = ["wasm-bindgen", "web-sys", "js-sys", "serde-wasm-bindgen"]
+
+[package.metadata.docs.rs]
+rustdoc-args = ["--cfg", "docsrs"]
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1.0"
+url = { version = "2", features = ["serde"] }
+# num_enum = "0.5"
+rkyv = { version = "0.7.39", features = ["validation", "uuid", "copy", "strict"] }
+bytecheck = { version = "0.6.9", features = ["uuid", "simdutf8_std", "simdutf8"] }
+
+# Webauthn Components
+wasm-bindgen = { version = "0.2", features = ["serde-serialize"], optional = true }
+serde-wasm-bindgen = { version = "0.4", optional = true }
+js-sys = { version = "0.3", optional = true }
+base64 = "0.21.0"
+
+[dependencies.web-sys]
+version = "0.3"
+optional = true
+features = [
+    "CredentialCreationOptions",
+    "CredentialRequestOptions",
+    "PublicKeyCredential",
+    "PublicKeyCredentialCreationOptions",
+    "AuthenticationExtensionsClientInputs",
+    "AuthenticationExtensionsClientOutputs",
+    "console",
+]

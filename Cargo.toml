@@ -1,0 +1,2 @@
+[workspace]
+members = ["webauthn", "webauthn-core", "webauthn-proto"]
