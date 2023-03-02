@@ -24,7 +24,7 @@ serde_json = "1.0"
 url = { version = "2", features = ["serde"] }
 # num_enum = "0.5"
 rkyv = { version = "0.7.39", features = ["validation", "uuid", "copy", "strict"] }
-bytecheck = { version = "0.7.0", features = ["uuid"] }
+bytecheck = { version = "0.6.9", features = ["uuid"] }
 
 # Webauthn Components
 wasm-bindgen = { version = "0.2", features = ["serde-serialize"], optional = true }
