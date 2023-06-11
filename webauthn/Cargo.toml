@@ -26,4 +26,4 @@ tracing = "0.1"
 serde = { version = "1", features = ["derive"] }
 uuid = { version = "1", features = ["v4", "serde"] }
 bytecheck = { version = "0.6.9", features = ["uuid"] }
-rkyv = { version = "0.7.39", features = ["validation", "uuid", "copy", "strict"] }
+rkyv = { version = "0.7.40", features = ["validation", "uuid", "copy"] }
